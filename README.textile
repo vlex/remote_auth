@@ -10,12 +10,12 @@ h1. PHP version
 
 Download the "remote_auth.php":http://github.com/vlex/remote_auth/raw/master/remote_auth.php file to your local server, then call the remote authentication function passing the appropriate parameters, for instance:
 
-  $my_data = array("account_id" => "1234", "name" => "tester", "token" => "TOKEN", "email" => "test@vlex.com");
-  remote_auth($my_data);
+<pre><code>$my_data = array("account_id" => "1234", "name" => "tester", "token" => "TOKEN", "email" => "test@vlex.com");
+remote_auth($my_data);</code></pre>
 
 h1. Ruby version
 
 Download the "remote_auth.rb":http://github.com/vlex/remote_auth/raw/master/remote_auth.rb file to your local server, then call the remote authentication function passing the appropriate parameters, for instance:
 
-  data = {:account_id => "1234", :name => "tester", :token => "TOKEN", :email => "test@vlex.com"}
-  Vlex::RemoteAuth::remote_auth data
+<pre><code>data = {:account_id => "1234", :name => "tester", :token => "TOKEN", :email => "test@vlex.com"}
+Vlex::RemoteAuth::remote_auth data</code></pre>
