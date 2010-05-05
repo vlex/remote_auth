@@ -11,7 +11,7 @@
  */
 function remote_auth($data) {
   // Set default remote authorization path
-  $REMOTE_AUTH_URL = "http://vlex.com/account/login_remote_auth";
+  $REMOTE_AUTH_URL = "http://vlex.com/session/remote_auth";
 
   // Sort $data checking that required parameters are present
   $keys = array("name", "email", "account_id", "token");
