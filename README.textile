@@ -19,3 +19,10 @@ Download the "remote_auth.rb":http://github.com/vlex/remote_auth/raw/master/remo
 
 <pre><code>data = {:account_id => "1234", :name => "tester", :token => "TOKEN", :email => "test@vlex.com"}
 Vlex::RemoteAuth::remote_auth data</code></pre>
+
+h1. ASP Classic version
+
+Download the "remote_auth.asp":http://github.com/vlex/remote_auth/raw/master/remote_auth.asp file to your local server, then call the remote authentication function passing the appropriate parameters, for instance:
+<pre><code>
+  redirect_to_remote_auth(name, email, account_id, token)
+</code></pre>
