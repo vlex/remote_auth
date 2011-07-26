@@ -48,3 +48,23 @@ Download the "SingleSingOnVlex.java":http://github.com/vlex/remote_auth/raw/mast
 </code></pre><br>
 Example "coldfusion":http://github.com/vlex/remote_auth/raw/master/sso-coldfusion.zip
 
+h1. JSP version
+
+Download the "RemoteAuth.java":http://github.com/vlex/remote_auth/raw/master/RemoteAuth.java file to your local server, then call the remote authentication function passing the appropriate parameters, for instance:
+
+<pre><code>
+<%@page import="java.util.HashMap,vlex.RemoteAuth"%>
+<%
+        HashMap<String,String >hash = new HashMap<String,String>(5);
+        hash.put("name",request.getParameter("name")); 
+        hash.put("email",request.getParameter("email"));
+        hash.put("account_id","[ID CUENTA]");
+        hash.put("token","[TOKEN]");
+        Number current = System.currentTimeMillis()/1000;
+        hash.put("timestamp",current.toString());        
+        String link = RemoteAuth.remote_auth(hash);
+        response.sendRedirect(link);
+%>
+</code></pre><br>
+Example "coldfusion":http://github.com/vlex/remote_auth/raw/master/sso-jsp.zip
+
