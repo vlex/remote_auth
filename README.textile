@@ -66,5 +66,5 @@ Download the "RemoteAuth.java":http://github.com/vlex/remote_auth/raw/master/Rem
         response.sendRedirect(link);
 %>
 </code></pre><br>
-Example "coldfusion":http://github.com/vlex/remote_auth/raw/master/sso-jsp.zip
+Example "jsp":http://github.com/vlex/remote_auth/raw/master/sso-jsp.zip
 
