@@ -26,3 +26,25 @@ Download the "remote_auth.asp":http://github.com/vlex/remote_auth/raw/master/rem
 <pre><code>
   redirect_to_remote_auth(name, email, account_id, token)
 </code></pre>
+
+h1. ColdFusion version
+
+Download the "remote_auth.php":http://github.com/vlex/remote_auth/raw/master/SingleSingOnVlex.java file to your local server, then call the remote authentication function passing the appropriate parameters, for instance:
+
+<pre><code>
+<cfset map = createObject("java","java.util.HashMap").init()>
+
+<cfset map.put("name",name)>
+<cfset map.put("email",email)>
+<cfset map.put("account_id",account_id)>
+<cfset map.put("token",token)>
+
+<cfset sso = CreateObject("java", "SingleSingOnVlex")>
+
+<cfset link = sso.remote_auth(map)>
+
+<cflocation url=#link#>
+
+</code></pre><br>
+Example "coldfusion":http://github.com/vlex/remote_auth/raw/master/sso-coldfusion.zip
+
