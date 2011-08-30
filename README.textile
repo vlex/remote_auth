@@ -1,9 +1,11 @@
 h1. Single sign-on to vLex.com with remote authentication
 
 Grants single sign-on access to users with a corporate account.
-To use this function, the company needs a unique account_id and token which can be obtained from vLex web page, as indicated in "vLex Support Center":http://vlex.zendesk.com/entries/156795-bienvenidos-al-centro-de-ayuda-de-vlex
+
+To use this function, the company needs a unique account_id and token which can be obtained from vLex web page, as explained in the "related support topic":http://help.vlex.com/entries/20403021-technical-documentation-for-the-remote-authentication-option-single-sign-on
  
 The main entry point is the +remote_auth+ function. 
+
 This collects the parameters (either provided by the same user with a web form or included by the company with hidden fields) and returns the URL where the user should be redirected to enter vLex without explicitly signing in.
 
 h1. PHP version
@@ -23,6 +25,7 @@ Vlex::RemoteAuth::remote_auth data</code></pre>
 h1. ASP Classic version
 
 Download the "remote_auth.asp":http://github.com/vlex/remote_auth/raw/master/remote_auth.asp file to your local server, then call the remote authentication function passing the appropriate parameters, for instance:
+
 <pre><code>
   redirect_to_remote_auth(name, email, account_id, token)
 </code></pre>
