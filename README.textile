@@ -71,3 +71,15 @@ Download the "RemoteAuth.java":http://github.com/vlex/remote_auth/raw/master/Rem
 </code></pre><br>
 Example "jsp":http://github.com/vlex/remote_auth/raw/master/sso-jsp.zip
 
+h1. Python
+
+Download the "RemoteAuth.py":http://github.com/vlex/remote_auth/raw/master/RemoteAuth.py file to your local server, then call the remote authentication function passing the appropriate parameters, for instance:
+
+<pre><code>
+        token = [token]
+        account_id = [ACCOUNT ID]
+        name = [USUARIO]
+        email = [E-MAIL]        
+</code></pre><br>
+Example "Python":http://github.com/vlex/remote_auth/raw/master/sso-python.zip
+
