@@ -25,6 +25,9 @@ function remote_auth($data) {
   
   // Add hash from the concatenated data
   $values["hash"] = md5(implode($values));
+
+  // delete token
+  unset($values["token"]);
   
   // Generate the query and return the URL
   $query = http_build_query($values); // name=yourname&amp;email=...
