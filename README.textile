@@ -83,3 +83,25 @@ Download the "RemoteAuth.py":http://github.com/vlex/remote_auth/raw/master/Remot
 </code></pre><br>
 Example "Python":http://github.com/vlex/remote_auth/raw/master/sso-python.zip
 
+
+h1. C#
+
+Download the "RemoteAuth.cs":http://github.com/vlex/remote_auth/raw/master/RemoteAuth.cs file to your local server, then call the remote authentication function passing the appropriate parameters, for instance:
+
+<pre><code>
+        // Definimos un hash con los parametros necesarios 
+        Hashtable hash = new Hashtable();
+        string tmp = "test@vlex.test";
+        hash.Add("name",tmp); 
+        hash.Add("email",tmp);
+        hash.Add("account_id",[ACCOUNT_ID]); # Valor entero.
+        hash.Add("token",[TOKEN]); # String
+
+        // Obtenemos los parametos para el request (name,email,account_id,hash,sha256,timestamp)  
+        Hashtable postdata = RemoteAuth.remote_auth(hash);
+        
+        // Realizar el request a https://vlex.com/session/remote_auth con los párametros obtenidos anteriormente (por GET o POST)
+
+</code></pre><br>
+
+
