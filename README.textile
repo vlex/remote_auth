@@ -35,18 +35,22 @@ h1. ColdFusion version
 Download the "sso-vlex.cfm":http://github.com/vlex/remote_auth/raw/master/sso-vlex.cfm file to your local server, then call the remote authentication function passing the appropriate parameters, for instance:
 
 <pre><code>
-<cfset map = createObject("java","java.util.HashMap").init()>
 
-<cfset map.put("name",name)>
-<cfset map.put("email",email)>
-<cfset map.put("account_id",account_id)>
-<cfset map.put("token",token)>
+ <cfset account_id = "1234">
+ <cfset token = "TOKEN">
+ <cfset name = "NAME">
+ <cfset email = "EMAIL">
 
-<cfset sso = CreateObject("java", "SingleSingOnVlex")>
+ <cfset startTime = "{ts '1970-01-01 00:00:00'}">
+ <cfset nowTime = now()>
+ <cfset seconds = dateDiff('s',startTime,nowTime)>
+ <cfset seconds = seconds + 10800>
 
-<cfset link = sso.remote_auth(map)>
 
-<cflocation url=#link#>
+ <cfset tmp= name & email & account_id & token & seconds>
+ <cfset hash = LCase(Hash(tmp, "MD5"))>
+
+ <cfset link = "http://vlex.com/session/remote_auth?name=" & name & "&email=" & email & "&account_id=" & account_id & "&timestamp=" & seconds & "&hash=" & hash> 
 
 </code></pre><br>
 Example "coldfusion":http://github.com/vlex/remote_auth/raw/master/test_coldfusion.zip
