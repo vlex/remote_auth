@@ -32,7 +32,7 @@ Download the "remote_auth.asp":http://github.com/vlex/remote_auth/raw/master/rem
 
 h1. ColdFusion version
 
-Download the "sso-vlex.cfm.java":http://github.com/vlex/remote_auth/raw/master/sso-vlex.cfm file to your local server, then call the remote authentication function passing the appropriate parameters, for instance:
+Download the "sso-vlex.cfm":http://github.com/vlex/remote_auth/raw/master/sso-vlex.cfm file to your local server, then call the remote authentication function passing the appropriate parameters, for instance:
 
 <pre><code>
 <cfset map = createObject("java","java.util.HashMap").init()>
