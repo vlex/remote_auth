@@ -1,5 +1,6 @@
 package vlex;
 import java.io.FileInputStream;
+import java.net.URLEncoder;
 import java.security.MessageDigest;
 import java.util.HashMap;
 import java.util.*;
@@ -43,7 +44,7 @@ public class RemoteAuth
         Object params[] =  hm.keySet().toArray();
         
         for(int i=0;i<params.length;i++){            
-            remote_auth_url += params[i].toString()+"="+hm.get(params[i]).toString();
+            remote_auth_url += URLEncoder.encode(params[i].toString(),"UTF-8")+"="+URLEncoder.encode(hm.get(params[i]).toString(),"UTF-8");
             if (i < params.length-1) {
                remote_auth_url +="&";}
         }
