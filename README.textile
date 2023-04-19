@@ -2,7 +2,7 @@ h1. Single sign-on to vLex.com with remote authentication
 
 Grants single sign-on access to users with a corporate account.
 
-To use this function, the company needs a unique account_id and token which can be obtained from vLex web page, as explained in the "related support topic":http://help.vlex.com/entries/20403021-technical-documentation-for-the-remote-authentication-option-single-sign-on
+To use this function, the company needs a unique account_id and token which can be obtained from vLex web page, as explained in the "related support topic":https://kb.vlex.com/en/knowledge-base/access-via-sso-and-personal-account/
  
 The main entry point is the +remote_auth+ function. 
 
