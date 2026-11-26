@@ -1,0 +1,7 @@
+# overlord.yml — repo metadata consumed by Overlord (https://github.com/clio/overlord).
+# Docs: https://github.com/clio/overlord/blob/master/README.md#using-overlord-on-your-repo
+
+tier: 3
+classification: library
+owners:
+  - dean-pendley
