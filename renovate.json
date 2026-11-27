@@ -1,0 +1,8 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>clio/cfg-renovate",
+    "github>clio/cfg-renovate//presets/grouped-minor-patch.json"
+  ],
+  "prConcurrentLimit": 7
+}
